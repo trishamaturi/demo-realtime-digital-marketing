@@ -55,7 +55,7 @@ const RealtimeChart = () => {
             <Text>Serving ads real-time to simulated subscribers</Text>
           </Stack>
         </Stack>
-        <Stats />
+        <Stats page="transact"/>
       </Stack>
       <Stack border="1px solid silver" borderRadius="10px" padding="15px">
         <Flex justifyContent="space-between" alignItems="center">
@@ -220,7 +220,7 @@ const StatsWrapper = () => {
   );
 };
 
-export const Dashboard = () => {
+export const Transact = () => {
   const { connected, initialized } = useConnectionState();
   const enabled = useRecoilValue(simulatorEnabled);
   useSimulationMonitor(enabled && connected && initialized);

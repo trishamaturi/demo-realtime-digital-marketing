@@ -88,7 +88,7 @@ export const HomePage: React.FC = () => {
   React.useEffect(() => {
     if (connected) {
       updateCityList();
-      navigate("/dashboard");
+      navigate("/transact");
     }
   }, [connected, navigate, updateCityList]);
 

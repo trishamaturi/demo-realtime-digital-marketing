@@ -229,7 +229,7 @@ const ConnectionSection = ({ connected }: { connected: boolean }) => {
           </Link>
         </Text>
       }
-      right={<DatabaseConfigForm showScaleFactor />}
+      right={<DatabaseConfigForm showScaleFactor editable/>}
     />
   );
 };
@@ -985,8 +985,8 @@ const CompleteToast = () => {
             <ul style={{ listStylePosition: "inside" }}>
               <li>
                 Adding or removing location from{" "}
-                <a onClick={() => navigate("/dashboard")} style={linkStyle}>
-                  Dashboard
+                <a onClick={() => navigate("/transact")} style={linkStyle}>
+                  Transact
                 </a>
               </li>
               <li>

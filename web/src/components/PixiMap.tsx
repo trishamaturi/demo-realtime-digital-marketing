@@ -246,7 +246,7 @@ const CitySelectionDropdown: React.FC<{
     setDropdownDisabled(selectedCities.length <= 0 || isUpdating || !connected);
     if (selectedCities.length <= 0) {
       setDropdownDisabledMsg(
-        "You need to select at least one city from the available locations on the Dashboard page"
+        "You need to select at least one city from the available locations on the Transact page"
       );
     } else if (isUpdating) {
       setDropdownDisabledMsg("City list is updating, please wait.");

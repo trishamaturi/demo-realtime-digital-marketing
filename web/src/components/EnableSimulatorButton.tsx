@@ -93,7 +93,7 @@ export const SimulatorToggler = ({
       </FormLabel>
       <Switch
         id="simulator-switch"
-        disabled={toggling}
+        isDisabled={true}
         isChecked={enabled}
         onChange={onToggleSimulator}
         {...switchProps}

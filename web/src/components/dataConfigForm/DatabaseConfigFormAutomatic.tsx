@@ -14,11 +14,13 @@ import {
 type Props = {
   showDatabase?: boolean;
   showScaleFactor?: boolean;
+  editable?: boolean;
 };
 
 export const DatabaseConfigForm = ({
   showDatabase,
   showScaleFactor,
+  editable,
 }: Props) => {
   const [host, setHost] = useRecoilState(connectionHost);
   const [user, setUser] = useRecoilState(connectionUser);
@@ -33,6 +35,7 @@ export const DatabaseConfigForm = ({
         placeholder="martech"
         value={database}
         setValue={setDatabase}
+        editable={editable}
       />
     );
   }
@@ -50,6 +53,7 @@ export const DatabaseConfigForm = ({
         value={host}
         setValue={setHost}
         helpText="Your workspace hostname."
+        editable={editable}
       />
       <SimpleGrid columns={2} gap={2}>
         <ConfigInput
@@ -58,6 +62,7 @@ export const DatabaseConfigForm = ({
           placeholder="admin"
           value={user}
           setValue={setUser}
+          editable={editable}
         />
         <ConfigInput
           label="Workspace Group Password"
@@ -65,10 +70,13 @@ export const DatabaseConfigForm = ({
           value={password}
           setValue={setPassword}
           type="password"
+          editable={editable}
         />
       </SimpleGrid>
       {databaseInput}
       {scaleFactor}
     </Stack>
   );
+
+ 
 };

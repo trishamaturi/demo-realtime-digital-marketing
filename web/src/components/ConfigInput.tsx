@@ -14,6 +14,7 @@ type ConfigInputProps = {
   helpText?: React.ReactNode;
   type?: "text" | "password" | "number";
   required?: boolean;
+  editable?: boolean;
 };
 
 export const ConfigInput = ({
@@ -24,6 +25,7 @@ export const ConfigInput = ({
   helpText,
   type = "text",
   required = false,
+  editable,
 }: ConfigInputProps) => (
   <FormControl>
     <FormLabel mb={1} fontSize="xs" fontWeight="bold" textTransform="uppercase">
@@ -38,6 +40,7 @@ export const ConfigInput = ({
       value={value}
       onChange={(e) => setValue(e.target.value)}
       type={type}
+      isReadOnly={editable}
     />
     {helpText ? (
       <FormHelperText fontSize="xs">{helpText}</FormHelperText>

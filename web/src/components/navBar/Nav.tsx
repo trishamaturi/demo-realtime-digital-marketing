@@ -180,13 +180,13 @@ export const Nav = () => {
   const links = (
     <>
       <NavLinkComponent
-        to="/dashboard"
-        NavLinkTitle="Dashboard"
+        to="/transact"
+        NavLinkTitle="Transact"
         IconElement={<Icon as={useColorModeValue(BsMap, BsMapFill)} />}
       />
       <NavLinkComponent
         to="/analytics"
-        NavLinkTitle="Analytics"
+        NavLinkTitle="Analyze"
         IconElement={
           <Icon
             border="1px"

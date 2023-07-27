@@ -50,6 +50,7 @@ import { connectionConfig, simulatorEnabled } from "@/data/recoil";
 import { useConnectionState } from "@/view/hooks/hooks";
 import { useSimulationMonitor } from "@/view/hooks/useSimulationMonitor";
 import { useSimulator } from "@/view/hooks/useSimulator";
+import { Stats } from "@/components/Stats";
 
 const formatPct = format(",.2%");
 const formatStat = format(".4~s");
@@ -61,6 +62,7 @@ const NotificationZoneMap = () => {
     <Flex gap={5} direction={isSmallScreen ? "column" : "row"}>
       <Stack flex={2}>
         <StatGrid />
+        <Stats page="analyze"/>
       </Stack>
       <Box
         padding="17px"

@@ -18,7 +18,7 @@ import { Footer } from "@/components/Footer";
 import { Nav } from "@/components/navBar/Nav";
 import { AnalyticsDashboard } from "@/pages/Analytics";
 import { Configure } from "@/pages/Configure";
-import { Dashboard } from "@/pages/Dashboard";
+import { Transact } from "@/pages/Transact";
 import { HomePage } from "@/pages/HomePage";
 import { useConnectionState } from "@/view/hooks/hooks";
 
@@ -38,7 +38,7 @@ const WelcomeMessageToast = () => {
         This is a demo application for an international marketing company
         serving simulated customer offers to millions of subscribers. You can:
         <ul style={{ listStylePosition: "inside", listStyleType: "initial" }}>
-          <li>Add or remove locations from dashboard</li>
+          <li>Add or remove locations from "Transact"</li>
           <li>Inspect engagement under "Analytics"</li>
           <li>Change schema settings with "Configure"</li>
         </ul>
@@ -134,10 +134,10 @@ const RoutesBlock = () => {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route
-        path="/dashboard"
+        path="/transact"
         element={
           <PrivateRoute>
-            <Dashboard />
+            <Transact />
           </PrivateRoute>
         }
       />
@@ -157,7 +157,7 @@ const RoutesBlock = () => {
           </PrivateRoute>
         }
       />
-      <Route path="*" element={<Navigate to="/dashboard" replace />} />
+      <Route path="*" element={<Navigate to="/transact" replace />} />
     </Routes>
   );
 };
